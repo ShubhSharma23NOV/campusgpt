@@ -1,0 +1,11 @@
+# Special requirements for Python 3.14
+# Uses pydantic v1 (pure Python, no Rust compilation needed)
+
+flask==3.1.0
+flask-cors==5.0.0
+flask-jwt-extended==4.7.1
+sqlalchemy==2.0.31
+aiosqlite==0.20.0
+python-dotenv==1.0.1
+pypdf==4.3.1
+bcrypt==4.2.1

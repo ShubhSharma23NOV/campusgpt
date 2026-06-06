@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  * { @apply border-gray-200; }
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  }
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@layer components {
+  /* Sidebar */
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium
+           text-gray-600 hover:bg-primary-50 hover:text-primary-700
+           transition-colors duration-150 cursor-pointer;
+  }
+  .sidebar-link.active {
+    @apply bg-primary-50 text-primary-700;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 shadow-sm p-6;
+  }
+  .card-hover {
+    @apply card hover:shadow-md transition-shadow duration-200;
+  }
+
+  /* Stat chips */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-green  { @apply badge bg-green-100 text-green-800; }
+  .badge-red    { @apply badge bg-red-100 text-red-800; }
+  .badge-yellow { @apply badge bg-yellow-100 text-yellow-800; }
+  .badge-blue   { @apply badge bg-blue-100 text-blue-800; }
+  .badge-gray   { @apply badge bg-gray-100 text-gray-700; }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+           bg-primary-600 text-white hover:bg-primary-700
+           disabled:opacity-50 disabled:cursor-not-allowed
+           transition-colors duration-150;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+           bg-white text-gray-700 border border-gray-200 hover:bg-gray-50
+           transition-colors duration-150;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium
+           text-gray-600 hover:bg-gray-100 transition-colors duration-150;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
+           placeholder:text-gray-400 transition-shadow;
+  }
+
+  /* Chat bubbles */
+  .chat-user {
+    @apply ml-auto max-w-[80%] bg-primary-600 text-white rounded-2xl rounded-tr-sm px-4 py-3 text-sm;
+  }
+  .chat-bot {
+    @apply mr-auto max-w-[80%] bg-white border border-gray-100 shadow-sm rounded-2xl rounded-tl-sm px-4 py-3 text-sm text-gray-800;
+  }
+
+  /* Progress bar */
+  .progress-track { @apply w-full bg-gray-100 rounded-full h-2; }
+  .progress-bar   { @apply h-2 rounded-full transition-all duration-500; }
+
+  /* Attendance status colors */
+  .att-safe     { @apply text-green-700 bg-green-50; }
+  .att-warning  { @apply text-yellow-700 bg-yellow-50; }
+  .att-critical { @apply text-red-700 bg-red-50; }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-blue-400 bg-clip-text text-transparent;
+  }
+}
