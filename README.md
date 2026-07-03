@@ -71,7 +71,7 @@ copy .env.example .env.local   # Windows
 npm run dev
 ```
 Frontend runs at → **http://localhost:5173**
-   App working link:- https://campusgpt1.netlify.app/
+   App working link:- https://campusgpt-ai-student-copilot-356200851822.asia-southeast1.run.app
 
 ---
 
